@@ -15,7 +15,7 @@ from azure.storage.blob import ContentSettings
 
 app=Flask(__name__)
 
-block_blob_service = BlockBlobService(account_name='haristorage6', account_key='FJfgUXVVZhHBJNIBtjG+prdKI+6mfXPBvAUdHvRvVmtm3X0aD9t5HuMEUTQ1Xt3o93vreex9O5o6pxm6Jb7YeA==')
+block_blob_service = BlockBlobService(account_name='haristorage6', account_key='')
 block_blob_service.create_container('mycontainer', public_access=PublicAccess.Container)
 connection = MongoClient("mongodb://hari-nosql:x3FirtEAOz0FQdtDwswOC6ztz7WfoqKHqmkIRKydeFPcNeNFI1EgyeISqnDQto1Q6uuRs9KV9MaGf1prUy6qXg==@hari-nosql.documents.azure.com:10255/?ssl=true&replicaSet=globaldb")
 

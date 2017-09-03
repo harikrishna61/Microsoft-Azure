@@ -1,0 +1,76 @@
+<!--Name: Bathala, Harikrishna-->
+ <!--ID: 1001415489-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+<h4>Harikrishna bathala</h4>
+<h4>1001415489</h4>
+<form action="/uploadimg" method ="post" enctype = "multipart/form-data">
+     <h4>Upload Imagee</h4>
+      <input type="file" name="file" ><br>
+     <input type="submit" id="subihm"  name="subihm" >
+ </form>
+<hr>
+<h4>Upload csv</h4>
+<form action="/uploadcsv" method="post" enctype="multipart/form-data">
+
+    <input type="file" name="file" >
+    <input type="submit" name="upcsvsub" id="upcsvsub" />
+</form>
+<br>
+<hr>
+
+<h4>Display</h4>
+<form action="/displayata" method="post" >
+    <input type="text" name="imgenme" id="imgnme" />
+    <input type="submit" name="dissub" id="disub" />
+    Time Taken : {{differrnce1}}
+<ol >
+        {% for (fname,imname) in imgg %}
+
+        <li><img src={{fname}} /></li>
+
+        {{imname}}
+        {% endfor %}
+</ol>
+
+<ol type="1">
+        {% for fname in img_ingred %}
+        <li>{{ fname }}</li>
+        {% endfor %}
+    </ol>
+    <ol type="1">
+        {% for fname in img_cal %}
+        <li>{{ fname }}</li>
+        {% endfor %}
+    </ol><ol type="1">
+        {% for fname in img_status %}
+        <li>{{ fname }}</li>
+        {% endfor %}
+    </ol><ol type="1">
+        {% for fname in img_name %}
+        <li>{{ fname }}</li>
+        {% endfor %}
+    </ol>
+
+<!--<img src={{img_url}} />-->
+<!--{{img_ingred}}<br>-->
+    <!--{{img_cal}}<br>-->
+    <!--{{img_status}}<br>-->
+    <!--{{img_name}}<br>-->
+    <hr>
+    <hr>
+</form>
+<form action="/range" method="post">
+    <input type="text" name="minrange" id="minrange" />
+    <input type="text" name="maxrange" id="maxrange" />
+    <input type="submit" name="ransub" id="ransub" />
+
+
+</form>
+</body>
+</html>
